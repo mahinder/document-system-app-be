@@ -1,0 +1,8 @@
+{
+  "name": "Document App Backend",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "api-gateway",
+  "workspaceFolder": "/workspace",
+  "settings": {},
+  "extensions": ["dbaeumer.vscode-eslint"]
+}
