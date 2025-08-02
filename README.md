@@ -1,6 +1,6 @@
 # Post-App Backend
 
-This repository contains the backend services for the Post-App application, designed with a microservices architecture. It leverages Docker Compose for orchestration and includes services for authentication, post management, an API gateway, and database management using MongoDB and PostgreSQL.
+This repository contains the backend services for the Document-App application, designed with a microservices architecture. It leverages Docker Compose for orchestration and includes services for authentication, document management, an API gateway, and database management using MongoDB and PostgreSQL.
 
 ## Table of Contents
 
@@ -8,7 +8,7 @@ This repository contains the backend services for the Post-App application, desi
 - [Services](#services)
   - [API Gateway](#api-gateway)
   - [Auth Service](#auth-service)
-  - [Post Service](#post-service)
+  - [Document Service](#document-service)
 - [Databases](#databases)
   - [MongoDB](#mongodb)
   - [PostgreSQL](#postgresql)
