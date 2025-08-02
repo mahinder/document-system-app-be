@@ -32,7 +32,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/swagger": "^11.0.7",
     "@prisma/client": "^6.5.0",
-    "axios": "^1.8.4",
+    "axios": "^1.11.0",
     "consul": "^2.0.1",
     "dotenv": "^16.4.7",
     "jsonwebtoken": "^9.0.2",
@@ -73,13 +73,15 @@
     "typescript-eslint": "^8.20.0"
   },
   "jest": {
-
     "preset": "ts-jest",
     "moduleNameMapper": {
       "^src/(.*)$": "<rootDir>/src/$1"
     },
-    "moduleFileExtensions": ["ts", "js", "json"],
-
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
     "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
@@ -90,6 +92,5 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-
   }
 }
