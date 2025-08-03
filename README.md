@@ -29,7 +29,7 @@ This repository contains the backend services for the Document-App application, 
 
 ## Architecture Overview
 
-![image](https://github.com/user-attachments/assets/add7a7bb-0bd8-43fe-8ac5-89a0958d9c7a)
+For Diagram please check high-level architecture diagram png file.
 
 The backend is structured into multiple services to promote scalability and maintainability:
 
