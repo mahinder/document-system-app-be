@@ -9,9 +9,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ConsulModule } from './consule/consule.module';
 import { HealthController } from './health.controller';
 import { PrometheusModule } from '@willsoto/nestjs-prometheus';
-
+import { APP_GUARD } from '@nestjs/core';
+import { JwtAuthGuard } from './common/jwt.guard';
+import { RolesGuard } from './common/roles.guard';
+import {IngestionModule} from './ingestion/ingestion.module';
 @Module({
   imports: [
+    IngestionModule,
     PrometheusModule.register(),
     MongooseModule.forRoot('mongodb://mongo1,mongo2,mongo3/postdb', {
       replicaSet: 'rs0',
@@ -28,10 +32,14 @@ import { PrometheusModule } from '@willsoto/nestjs-prometheus';
       }),
     }),
     DocumentModule,
-    ConsulModule
+    ConsulModule,
   ],
   controllers: [AppController, HealthController],
-  providers: [AppService],
-  exports: [CacheModule]
+  providers: [
+    { provide: APP_GUARD, useClass: JwtAuthGuard },
+    { provide: APP_GUARD, useClass: RolesGuard },
+    AppService,
+  ],
+  exports: [CacheModule],
 })
-export class AppModule { }
+export class AppModule {}
